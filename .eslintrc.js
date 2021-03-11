@@ -1,30 +1,29 @@
 module.exports = {
-  extends: [
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:prettier/recommended',
-  ],
-  env: {
-    es6: true,
-    node: true,
-    browser: true,
-  },
-  parserOptions: {
-    ecmaVersion: 11,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
-  ignorePatterns: ['/node_modules/**', '/build/**'],
+  extends: ['react-app', 'react-app/jest'],
   rules: {
-    'no-unused-vars': ['warn', { args: 'none', argsIgnorePattern: 'req|res|next|val' }],
-    'prettier/prettier': ['error'],
-    'react/react-in-jsx-scope': 0,
+    'implicit-arrow-linebreak': 0,
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'no-shadow': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 0,
+    'no-trailing-spaces': 'error',
+    'eol-last': ['error', 'always'],
+    'no-tabs': 0,
+    'jsx-quotes': 0,
+    'react/no-array-index-key': 0,
+    'react/require-default-props': 0,
+    'import/no-named-as-default': 0,
+    'max-len': [2, { code: 200, tabWidth: 6, ignoreUrls: true }],
+    'arrow-parens': 0,
+    'object-curly-newline': 0,
+    'comma-dangle': ['error', 'never']
   },
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      rules: {
+        'additional-typescript-only-rule': 'warn'
+      }
+    }
+  ]
 };
