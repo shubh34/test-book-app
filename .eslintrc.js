@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['react-app', 'react-app/jest'],
+  extends: ['react-app', 'react-app/jest', 'plugin:import/errors', 'plugin:import/warnings'],
   rules: {
     'implicit-arrow-linebreak': 0,
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
