@@ -5,6 +5,6 @@ export const defaultState = {
 };
 
 const reducer = (state = defaultState, action) => {
-    return state;
+  return state;
 };
 export default reducer;
