@@ -1,7 +1,13 @@
 import { FETCH_BOOKS_REQUEST, FETCH_BOOKS_SUCCESS, FETCH_BOOKS_FAILURE } from './actions';
 
+export const pageDefaultState = {
+  lists: [],
+  isApiCallInProgress: false,
+  hasError: false,
+  error: undefined
+};
 export const defaultState = {
-  books: [],
+  books: {},
   isApiCallInProgress: false,
   hasError: false,
   error: undefined
@@ -12,12 +18,38 @@ const reducer = (state = defaultState, action) => {
     case FETCH_BOOKS_REQUEST:
       return {
         ...state,
-        ...action.payload
+        books: {
+          ...state.books,
+          [action.meta.page]: {
+            ...pageDefaultState,
+            isApiCallInProgress: true,
+            hasError: false,
+            error: undefined
+          }
+        }
       };
     case FETCH_BOOKS_SUCCESS:
-      return defaultState;
+      return {
+        ...state,
+        books: {
+          ...state.books,
+          [action.meta.page]: {
+            ...pageDefaultState,
+            lists: action.payload.books
+          }
+        }
+      };
     case FETCH_BOOKS_FAILURE:
-      return defaultState;
+      return {
+        ...state,
+        books: {
+          ...state.books,
+          [action.meta.page]: {
+            ...pageDefaultState,
+            hasError: true
+          }
+        }
+      };
     default:
       return state;
   }
