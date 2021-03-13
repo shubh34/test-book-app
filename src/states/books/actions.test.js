@@ -23,24 +23,24 @@ describe('Books actions', () => {
       ).toMatchSnapshot();
     });
   });
-  describe('fetchBooks failure', () => {
-    it('should create action for fetchBooks with default params', () => {
+  describe('fetchBookRequest', () => {
+    it('should create action for fetch book request', () => {
       expect(fetchBookRequest(1)).toEqual({
         type: FETCH_BOOKS_REQUEST,
         meta: { page: 1 }
       });
     });
   });
-  describe('fetchBooks request', () => {
-    it('should create action for fetchBooks with default params', () => {
+  describe('fetchBookSuccess', () => {
+    it('should create action for fetchBooks success', () => {
       expect(fetchBookSuccess(1)).toEqual({
         type: FETCH_BOOKS_SUCCESS,
         meta: { page: 1 }
       });
     });
   });
-  describe('fetchBooks success', () => {
-    it('should create action for fetchBooks with default params', () => {
+  describe('fetchBookFailure', () => {
+    it('should create action for fetchBooks failure', () => {
       expect(fetchBookFailure(1)).toEqual({
         type: FETCH_BOOKS_FAILURE,
         meta: { page: 1 }
