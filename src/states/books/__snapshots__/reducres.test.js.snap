@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer Books FETCH_BOOKS_FAILURE should update error for requested page 1`] = `
+Object {
+  "books": Object {
+    "1": Object {
+      "error": undefined,
+      "hasError": true,
+      "isApiCallInProgress": false,
+      "lists": Array [],
+    },
+  },
+  "meta": Object {
+    "count": 0,
+    "filters": Array [],
+    "itemsPerPage": 20,
+    "page": 1,
+  },
+}
+`;
+
+exports[`Reducer Books FETCH_BOOKS_REQUEST should update api in call for requested page 1`] = `
+Object {
+  "books": Object {
+    "1": Object {
+      "error": undefined,
+      "hasError": false,
+      "isApiCallInProgress": true,
+      "lists": Array [],
+    },
+  },
+  "meta": Object {
+    "count": 0,
+    "filters": Array [],
+    "itemsPerPage": 20,
+    "page": 1,
+  },
+}
+`;
+
+exports[`Reducer Books FETCH_BOOKS_SUCCESS should update books list of requested page 1`] = `
+Object {
+  "books": Object {
+    "1": Object {
+      "error": undefined,
+      "hasError": false,
+      "isApiCallInProgress": false,
+      "lists": Array [
+        Object {
+          "id": "book-id",
+        },
+      ],
+    },
+  },
+  "meta": Object {
+    "count": 2,
+    "filters": Array [],
+    "itemsPerPage": 20,
+    "page": 1,
+  },
+}
+`;
