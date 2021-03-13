@@ -40,7 +40,7 @@ const reducer = (state = defaultState, action) => {
         }
       };
     case FETCH_BOOKS_FAILURE:
-       return {
+      return {
         ...state,
         books: {
           ...state.books,
@@ -49,7 +49,7 @@ const reducer = (state = defaultState, action) => {
             hasError: true
           }
         }
-      };;
+      };
     default:
       return state;
   }
