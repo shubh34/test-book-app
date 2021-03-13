@@ -5,6 +5,25 @@ export const FETCH_BOOKS_REQUEST = 'GET_BOOKS_REQUEST';
 export const FETCH_BOOKS_SUCCESS = 'GET_BOOKS_SUCCESS';
 export const FETCH_BOOKS_FAILURE = 'GET_BOOKS_FAILURE';
 
+export const fetchBookRequest = (page) => ({
+  type: FETCH_BOOKS_REQUEST,
+  meta: {
+    page
+  }
+});
+export const fetchBookSuccess = (page) => ({
+  type: FETCH_BOOKS_SUCCESS,
+  meta: {
+    page
+  }
+});
+export const fetchBookFailure = (page) => ({
+  type: FETCH_BOOKS_FAILURE,
+  meta: {
+    page
+  }
+});
+
 export const fetchBooks = ({ page = 1, itemsPerPage = 20, filters = [] } = {}) => {
   const endPoint = endpoints.fetchBooks;
   const url = endPoint.resolve();
@@ -12,12 +31,12 @@ export const fetchBooks = ({ page = 1, itemsPerPage = 20, filters = [] } = {}) =
     [RSAA]: {
       endpoint: url,
       method: endPoint.method,
-      body: {
+      body: JSON.stringify({
         page,
         itemsPerPage,
         filters
-      },
-      types: [FETCH_BOOKS_REQUEST, FETCH_BOOKS_SUCCESS, FETCH_BOOKS_FAILURE]
+      }),
+      types: [fetchBookRequest(page), fetchBookSuccess(page), fetchBookFailure(page)]
     }
   };
 };

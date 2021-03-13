@@ -33,6 +33,7 @@ describe('createEndpointMiddleware', () => {
       expect.objectContaining({
         [RSAA]: {
           endpoint: `${apiBaseUrl}test/RSAA`,
+          headers: { 'Content-Type': 'application/json' },
           types: []
         }
       })

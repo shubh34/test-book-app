@@ -11,6 +11,7 @@ export const endPointMiddleWare = () => (next) => (action) => {
   const nextAction = {
     [RSAA]: {
       ...action[RSAA],
+      headers: { 'Content-Type': 'application/json' },
       endpoint: endPointWithBaseUrl
     }
   };
