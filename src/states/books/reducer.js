@@ -8,9 +8,12 @@ export const pageDefaultState = {
 };
 export const defaultState = {
   books: {},
-  isApiCallInProgress: false,
-  hasError: false,
-  error: undefined
+  meta: {
+    page: 1,
+    count: 0,
+    itemsPerPage: 20,
+    filters: []
+  }
 };
 
 const reducer = (state = defaultState, action) => {
@@ -37,6 +40,10 @@ const reducer = (state = defaultState, action) => {
             ...pageDefaultState,
             lists: action.payload.books
           }
+        },
+        meta: {
+          ...state.meta,
+          count: action.payload.count
         }
       };
     case FETCH_BOOKS_FAILURE:

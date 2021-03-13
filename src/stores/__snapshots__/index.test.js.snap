@@ -19,9 +19,12 @@ Object {
   },
   "books": Object {
     "books": Object {},
-    "error": undefined,
-    "hasError": false,
-    "isApiCallInProgress": false,
+    "meta": Object {
+      "count": 0,
+      "filters": Array [],
+      "itemsPerPage": 20,
+      "page": 1,
+    },
   },
   "router": Object {
     "action": "POP",

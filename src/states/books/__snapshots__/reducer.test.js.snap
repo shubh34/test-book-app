@@ -10,9 +10,12 @@ Object {
       "lists": Array [],
     },
   },
-  "error": undefined,
-  "hasError": false,
-  "isApiCallInProgress": false,
+  "meta": Object {
+    "count": 0,
+    "filters": Array [],
+    "itemsPerPage": 20,
+    "page": 1,
+  },
 }
 `;
 
@@ -26,9 +29,12 @@ Object {
       "lists": Array [],
     },
   },
-  "error": undefined,
-  "hasError": false,
-  "isApiCallInProgress": false,
+  "meta": Object {
+    "count": 0,
+    "filters": Array [],
+    "itemsPerPage": 20,
+    "page": 1,
+  },
 }
 `;
 
@@ -46,8 +52,11 @@ Object {
       ],
     },
   },
-  "error": undefined,
-  "hasError": false,
-  "isApiCallInProgress": false,
+  "meta": Object {
+    "count": 2,
+    "filters": Array [],
+    "itemsPerPage": 20,
+    "page": 1,
+  },
 }
 `;
