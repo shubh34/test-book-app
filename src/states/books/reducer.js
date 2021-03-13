@@ -1,4 +1,4 @@
-import { GET_BOOKS_REQUEST, GET_BOOKS_SUCCESS, GET_BOOKS_FAILURE } from './actions';
+import { FETCH_BOOKS_REQUEST, FETCH_BOOKS_SUCCESS, FETCH_BOOKS_FAILURE } from './actions';
 
 export const defaultState = {
   books: [],
@@ -9,14 +9,14 @@ export const defaultState = {
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {
-    case GET_BOOKS_REQUEST:
+    case FETCH_BOOKS_REQUEST:
       return {
         ...state,
         ...action.payload
       };
-    case GET_BOOKS_SUCCESS:
+    case FETCH_BOOKS_SUCCESS:
       return defaultState;
-    case GET_BOOKS_FAILURE:
+    case FETCH_BOOKS_FAILURE:
       return defaultState;
     default:
       return state;

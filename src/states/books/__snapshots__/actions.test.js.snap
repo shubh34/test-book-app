@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Books actions should create action for fetchBooks with default params 1`] = `
+Object {
+  "@@redux-api-middleware/RSAA": Object {
+    "body": Object {
+      "filters": Array [],
+      "itemsPerPage": 20,
+      "page": 1,
+    },
+    "endpoint": "/api/books",
+    "method": "POST",
+    "types": Array [
+      "GET_BOOKS_REQUEST",
+      "GET_BOOKS_SUCCESS",
+      "GET_BOOKS_FAILURE",
+    ],
+  },
+}
+`;
+
+exports[`Books actions should create action for fetchBooks with passed params 1`] = `
+Object {
+  "@@redux-api-middleware/RSAA": Object {
+    "body": Object {
+      "filters": Array [
+        Object {
+          "type": "all",
+          "values": Array [
+            "YOUR_SEARCH_FIELD_CONTENTS",
+          ],
+        },
+      ],
+      "itemsPerPage": 60,
+      "page": 2,
+    },
+    "endpoint": "/api/books",
+    "method": "POST",
+    "types": Array [
+      "GET_BOOKS_REQUEST",
+      "GET_BOOKS_SUCCESS",
+      "GET_BOOKS_FAILURE",
+    ],
+  },
+}
+`;

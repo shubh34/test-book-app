@@ -5,14 +5,17 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 import { createBrowserHistory } from 'history';
 import { routerMiddleware } from 'connected-react-router';
+import { endPointMiddleWare } from './middlewares/createEndPointMiddleware';
 
 export const history = createBrowserHistory();
 
 const store = (initialState = {}) => {
   const middleWares =
     process.env.NODE_ENV === 'production'
-      ? applyMiddleware(routerMiddleware(history), apiMiddleware, thunk)
-      : composeWithDevTools(applyMiddleware(routerMiddleware(history), apiMiddleware, thunk));
+      ? applyMiddleware(routerMiddleware(history), endPointMiddleWare, apiMiddleware, thunk)
+      : composeWithDevTools(
+          applyMiddleware(routerMiddleware(history), endPointMiddleWare, apiMiddleware, thunk)
+        );
   return createStore(reducers(history), initialState, middleWares);
 };
 
