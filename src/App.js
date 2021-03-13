@@ -5,7 +5,7 @@ import configureStore, { history } from './stores';
 
 const store = configureStore();
 
-function App() {
+export const App = () => {
   return (
     <main className="App">
       <Provider store={store}>
@@ -15,6 +15,6 @@ function App() {
       </Provider>
     </main>
   );
-}
+};
 
 export default App;
