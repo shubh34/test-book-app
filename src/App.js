@@ -5,13 +5,12 @@ import './App.css';
 import configureStore, { history } from './stores';
 import { AppLayout } from './containers/AppLayout';
 
-
 const store = configureStore();
 
 export const App = () => {
   return (
     <main className="App">
-      <Suspense fallback={<div/>}>
+      <Suspense fallback={<div />}>
         <Provider store={store}>
           <ConnectedRouter history={history}>
             <AppLayout />
