@@ -19,7 +19,7 @@ const BooksFilters = () => {
     });
   };
   return (
-    <div style={{ display: 'flex', alignItems: 'center', padding: '16px 0' }}>
+    <div style={{ display: 'flex', alignItems: 'center', padding: '16px 0', flexFlow: 'wrap' }}>
       Show
       {booksPerPageOptions.map((option) => (
         <Button

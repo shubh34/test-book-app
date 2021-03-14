@@ -64,7 +64,7 @@ class BooksPagination extends Component {
       return null;
     }
     return (
-      <div style={{ display: 'flex', padding: '16px 0' }}>
+      <div style={{ display: 'flex', flexFlow: 'wrap', padding: '16px 0' }}>
         <Button name="Previous" disabled={!showPrevious} onClick={this.handlePagePrevious} />
         {[...Array(paginationButtonsToShow)].map((count, index) => {
           const buttonNumber = activePageStart + index;
