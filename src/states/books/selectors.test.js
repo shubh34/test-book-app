@@ -108,7 +108,7 @@ describe('Selectors', () => {
       expect(shouldShowPagination(mockStateWithBooksApiFailure)).toBe(false);
     });
     it('should true when books', () => {
-        expect(shouldShowPagination(mockStateWithBooks)).toBe(true);
-      });
+      expect(shouldShowPagination(mockStateWithBooks)).toBe(true);
+    });
   });
 });
