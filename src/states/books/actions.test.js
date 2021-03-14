@@ -5,7 +5,13 @@ import {
   fetchBookFailure,
   FETCH_BOOKS_REQUEST,
   FETCH_BOOKS_SUCCESS,
-  FETCH_BOOKS_FAILURE
+  FETCH_BOOKS_FAILURE,
+  setPageNumberToFetchBook,
+  SET_PAGE_NUMBER_TO_FETCH_BOOKS,
+  setPerPageToFetchBooks,
+  SET_PER_PAGE_BOOKS_TO_FETCH,
+  setSearchCriteriaToFetchBook,
+  SET_SEARCH_CRITERIA_TO_FETCH_BOOKS
 } from './actions';
 
 describe('Books actions', () => {
@@ -44,6 +50,30 @@ describe('Books actions', () => {
       expect(fetchBookFailure(1)).toEqual({
         type: FETCH_BOOKS_FAILURE,
         meta: { page: 1 }
+      });
+    });
+  });
+  describe('setPageNumberToFetchBook', () => {
+    it('should create action for setPageNumberToFetchBook', () => {
+      expect(setPageNumberToFetchBook(1)).toEqual({
+        type: SET_PAGE_NUMBER_TO_FETCH_BOOKS,
+        page: 1
+      });
+    });
+  });
+  describe('setPerPageToFetchBooks', () => {
+    it('should create action for setPerPageToFetchBooks', () => {
+      expect(setPerPageToFetchBooks(40)).toEqual({
+        type: SET_PER_PAGE_BOOKS_TO_FETCH,
+        itemsPerPage: 40
+      });
+    });
+  });
+  describe('setSearchCriteriaToFetchBook', () => {
+    it('should create action for setSearchCriteriaToFetchBook', () => {
+      expect(setSearchCriteriaToFetchBook('search')).toEqual({
+        type: SET_SEARCH_CRITERIA_TO_FETCH_BOOKS,
+        filters: [{ type: 'all', values: ['search'] }]
       });
     });
   });

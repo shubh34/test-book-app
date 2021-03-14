@@ -23,7 +23,7 @@ exports[`Books should render Books 1`] = `
         10
       </button>
       <button
-        class="sc-gKsewC fzYsXG"
+        class="sc-gKsewC jyHuJi"
         data-testid="20"
         id="20"
         name="20"
@@ -89,7 +89,7 @@ exports[`Books should render Books 1`] = `
           class="sc-dlfnbm fhHUUt"
         >
           <td
-            class="sc-eCssSg lbRtST"
+            class="sc-eCssSg hMVDoG"
             title="Name"
           >
             Book Title

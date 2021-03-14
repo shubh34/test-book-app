@@ -67,7 +67,6 @@ const reducer = (state = defaultState, action) => {
     case SET_PAGE_NUMBER_TO_FETCH_BOOKS:
       return {
         ...state,
-        books: {},
         meta: {
           ...state.meta,
           page: action.page

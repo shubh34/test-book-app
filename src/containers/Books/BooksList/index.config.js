@@ -5,7 +5,7 @@ export const bookTableConfig = [
     mobile_name: 'Name',
     path: 'book_title',
     styling: {
-      width: '35%'
+      width: '30%'
     }
   },
   {

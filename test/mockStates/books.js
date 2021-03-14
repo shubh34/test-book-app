@@ -29,8 +29,31 @@ export const bookStateWithBooks = {
   },
   meta: {
     page: 1,
-    count: 0,
-    itemsPerPage: 20,
+    count: 5,
+    itemsPerPage: 2,
     filters: []
+  }
+};
+
+export const booksStateWithApiInProgress = {
+  ...bookStateWithBooks,
+  books: {
+    1: {
+      lists: [],
+      isApiCallInProgress: true,
+      hasError: false,
+      error: undefined
+    }
+  }
+};
+export const booksStateWithApiFailure = {
+  ...bookStateWithBooks,
+  books: {
+    1: {
+      lists: [],
+      isApiCallInProgress: true,
+      hasError: true,
+      error: undefined
+    }
   }
 };

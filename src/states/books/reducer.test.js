@@ -1,5 +1,10 @@
 import reducer from './reducer';
-import { FETCH_BOOKS_REQUEST, FETCH_BOOKS_SUCCESS, FETCH_BOOKS_FAILURE } from './actions';
+import {
+  FETCH_BOOKS_REQUEST,
+  FETCH_BOOKS_SUCCESS,
+  FETCH_BOOKS_FAILURE,
+  SET_PAGE_NUMBER_TO_FETCH_BOOKS
+} from './actions';
 
 describe('Reducer Books', () => {
   it('FETCH_BOOKS_REQUEST should update api in call for requested page', () => {
@@ -28,5 +33,13 @@ describe('Reducer Books', () => {
     const updateState = reducer(undefined, action);
     expect(updateState.books[1].hasError).toBe(true);
     expect(updateState).toMatchSnapshot();
+  });
+  it('SET_PAGE_NUMBER_TO_FETCH_BOOKS should update page number', () => {
+    const action = {
+      type: SET_PAGE_NUMBER_TO_FETCH_BOOKS,
+      page: 2
+    };
+    const updateState = reducer(undefined, action);
+    expect(updateState.meta.page).toBe(2);
   });
 });

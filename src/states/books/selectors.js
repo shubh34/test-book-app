@@ -12,9 +12,11 @@ export const getActivePerPageCount = (state) => get(getBooksMeta(state), 'itemsP
 export const getTotalPages = (state) =>
   Math.ceil(getTotalBooksCount(state) / getActivePerPageCount(state));
 
-export const shouldShowPreviousButton = (state) => getActivePageNumber(state) === 1;
+export const shouldShowPreviousButton = (state) => getActivePageNumber(state) !== 1;
 
-export const shouldShowNextButton = (state) => getTotalPages(state) === getActivePageNumber(state);
+export const shouldShowNextButton = (state) => {
+  return getTotalPages(state) !== getActivePageNumber(state);
+};
 
 export const getActivePageStart = (state) => {
   const activePageNumber = getActivePageNumber(state);
@@ -38,11 +40,11 @@ export const fetchBookInProgress = (state) =>
   get(state, `books.books.${getActivePageNumber(state)}.isApiCallInProgress`, false);
 
 export const shouldShowNoBooks = (state) =>
-  get(state, `books.books.${getActivePageNumber(state)}.isApiCallInProgress`, false) &&
-  !getBooks(state).length;
+  !get(state, `books.books.${getActivePageNumber(state)}.isApiCallInProgress`, false) &&
+  getBooks(state).length === 0;
 
 export const shouldShowErrorMessage = (state) =>
   get(state, `books.books.${getActivePageNumber(state)}.hasError`, false);
 
 export const shouldShowPagination = (state) =>
-  !(shouldShowErrorMessage(state) || shouldShowErrorMessage(state) || fetchBookInProgress(state));
+  !(shouldShowErrorMessage(state) || shouldShowNoBooks(state) || fetchBookInProgress(state));

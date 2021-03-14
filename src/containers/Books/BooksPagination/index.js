@@ -48,7 +48,7 @@ const BooksPagination = () => {
   }
   return (
     <div style={{ display: 'flex', padding: '16px 0' }}>
-      <Button name="Previous" disabled={showPrevious} onClick={handlePagePrevious} />
+      <Button name="Previous" disabled={!showPrevious} onClick={handlePagePrevious} />
       {[...Array(paginationButtonsToShow)].map((count, index) => {
         const buttonNumber = activePageStart + index;
         return (
@@ -61,7 +61,7 @@ const BooksPagination = () => {
           />
         );
       })}
-      <Button name={'Next'} disabled={showNext} onClick={handlePageNext} />
+      <Button name={'Next'} disabled={!showNext} onClick={handlePageNext} />
     </div>
   );
 };
