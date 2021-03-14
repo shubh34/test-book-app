@@ -43,7 +43,6 @@ export const useBooks = () => {
   return {
     page: !isNaN(page) ? page : meta.page,
     itemsPerPage: !isNaN(perPage) ? perPage : meta.itemsPerPage,
-    filters: typeof search === 'string' ? [{ type: 'all', values: [search] }] : meta.filters,
-    searchParams
+    filters: typeof search === 'string' ? [{ type: 'all', values: [search] }] : meta.filters
   };
 };

@@ -1,15 +1,15 @@
 import { Suspense } from 'react';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import './App.css';
-import configureStore, { history } from './stores';
-import { AppLayout } from './containers/AppLayout';
+import configureStore, { history } from '../../stores';
+import { AppLayout } from '../AppLayout';
+import { StyledMain } from './styles.js';
 
 const store = configureStore();
 
 export const App = () => {
   return (
-    <main className="App">
+    <StyledMain className="App">
       <Suspense fallback={<div />}>
         <Provider store={store}>
           <ConnectedRouter history={history}>
@@ -17,7 +17,7 @@ export const App = () => {
           </ConnectedRouter>
         </Provider>
       </Suspense>
-    </main>
+    </StyledMain>
   );
 };
 

@@ -79,6 +79,7 @@ const reducer = (state = defaultState, action) => {
         books: {},
         meta: {
           ...state.meta,
+          page: 1,
           itemsPerPage: action.itemsPerPage
         }
       };
@@ -88,6 +89,7 @@ const reducer = (state = defaultState, action) => {
         books: {},
         meta: {
           ...state.meta,
+          page: 1,
           filters: action.filters
         }
       };
