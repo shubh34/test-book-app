@@ -62,17 +62,16 @@ Will format the source file with Prettier
 ## Additional functionality
 
 - `Responsive web application for all type of user mobile tablet web`
-- `Deployed the production Ready code at  https://demo-book.netlify.app/`
+- `Deployed the production Ready code at https://demo-book.netlify.app/`
 - `Loading state- when api call in progress`
 - `Error Handling when api fails`
 - `Page Not Found when URL is wrong`
 - `No books found when Api Doesn't return books`
 
-
 ## Tech Stack
 
-React, Redux, Jest, React testing library, Webpack, Prettier, Styled Component, 
+React, Redux, Jest, React testing library, Webpack, Prettier, Styled Component,
 
 ## TO DO
-- `Search Functionality`
 
+- `Search Functionality`
