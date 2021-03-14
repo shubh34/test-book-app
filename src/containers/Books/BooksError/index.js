@@ -1,6 +1,6 @@
 import PageHeader from '../../../components/PageHeader';
 
-const BooksNotFound = () => {
+const BooksError = () => {
   return (
     <div
       style={{
@@ -10,8 +10,8 @@ const BooksNotFound = () => {
         minHeight: '600px'
       }}
     >
-      <PageHeader header="No Books found!!"> </PageHeader>
+      <PageHeader header="Something Gone Wrong!!! Please try later"> </PageHeader>
     </div>
   );
 };
-export default BooksNotFound;
+export default BooksError;

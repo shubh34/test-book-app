@@ -5,16 +5,30 @@ exports[`renders learn react link 1`] = `
   <main
     class="sc-bdfBwQ eBSPrX App"
   >
-    <div
-      style="display: none;"
+    <header
+      style="display: none; align-items: center;"
     >
-      Menu
-    </div>
+      <h2
+        style="padding: 24px;"
+      >
+        My Books Store
+      </h2>
+      <nav>
+        <a
+          href="/books"
+        >
+          Home
+        </a>
+      </nav>
+    </header>
     <div
-      style="display: none;"
+      style="min-height: 90vh; display: none;"
+    />
+    <footer
+      style="padding: 24px; display: none; align-items: center; justify-content: center;"
     >
-      Footer
-    </div>
+      CopyRight by My Books Store
+    </footer>
     <div />
   </main>
 </div>

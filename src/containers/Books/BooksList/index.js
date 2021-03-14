@@ -1,14 +1,21 @@
 import { useSelector } from 'react-redux';
-import { getBooks, fetchBookInProgress, shouldShowNoBooks } from '../../../states/books/selectors';
+import {
+  getBooks,
+  fetchBookInProgress,
+  shouldShowNoBooks,
+  shouldShowErrorMessage
+} from '../../../states/books/selectors';
 import { bookTableConfig } from './index.config';
 import Table from '../../../components/Table';
 import BooksLoading from '../BooksLoading';
 import BooksNotFound from '../BooksNotFound';
+import BooksError from '../BooksError';
 
 const BooksList = () => {
   const books = useSelector(getBooks);
   const isApiCallInProgress = useSelector(fetchBookInProgress);
   const showNoBooksFound = useSelector(shouldShowNoBooks);
+  const showErrorMessage = useSelector(shouldShowErrorMessage);
   return (
     <>
       <Table.Container>
@@ -40,6 +47,7 @@ const BooksList = () => {
         </Table.Body>
       </Table.Container>
       {showNoBooksFound && <BooksNotFound />}
+      {showErrorMessage && <BooksError />}
     </>
   );
 };

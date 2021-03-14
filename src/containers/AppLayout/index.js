@@ -6,7 +6,9 @@ export const AppLayout = () => {
   return (
     <>
       <Menu />
-      <AppRoutes />
+      <div style={{ minHeight: '90vh' }}>
+        <AppRoutes />
+      </div>
       <Footer />
     </>
   );
