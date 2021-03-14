@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Books should render Books 1`] = `
+<div>
+  <div>
+    <table
+      class="sc-bdfBwQ SZIUD"
+    >
+      <thead
+        class="sc-gsTCUz eVsNgG"
+      >
+        <tr
+          class="sc-dlfnbm fhHUUt"
+        >
+          <th
+            class="sc-hKgILt eemWPu"
+          >
+            Name
+          </th>
+          <th
+            class="sc-hKgILt eemWPu"
+          >
+            Authors
+          </th>
+          <th
+            class="sc-hKgILt eemWPu"
+          >
+            Publication Year
+          </th>
+          <th
+            class="sc-hKgILt eemWPu"
+          >
+            Publication Location
+          </th>
+          <th
+            class="sc-hKgILt eemWPu"
+          >
+            Pages
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="sc-dlfnbm fhHUUt"
+        >
+          <td
+            class="sc-eCssSg lbRtST"
+            title="Name"
+          >
+            Book Title
+          </td>
+          <td
+            class="sc-eCssSg jMTdNr"
+            title="Authors"
+          >
+            Author 1,Author 2
+          </td>
+          <td
+            class="sc-eCssSg cWxcEj"
+            title="Year"
+          >
+            2020
+          </td>
+          <td
+            class="sc-eCssSg kkFOlx"
+            title="Location"
+          >
+            City, Country
+          </td>
+          <td
+            class="sc-eCssSg fPEa-ds"
+            title="Pages"
+          >
+            104
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    Heya Calling Books API 
+    <button>
+      Search
+    </button>
+  </div>
+</div>
+`;
