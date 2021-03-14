@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+This project is a responsive demo application where you can find huge collection of Books.
+The Books are displayed in Table Format and user can change per page view from 10 to 80 and can view books from one page to another.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Please visit this website to find your books https://demo-book.netlify.app/
+
+## Project Setup
+
+- Clone the project using `git clone https://github.com/shubh34/test-book-app.git`
+- Switch to develop branch using `git checkout develop`
+- Install the dependency using `npm install` install node if it complains
+- open the project in any IDE like Visual studio code to make changes
+- Run the application using `npm start`
+- Build the production application using `npm build`
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm test`
 
-### `yarn test`
+Launches the test runner in the interactive watch mode.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm run build`
 
-### `yarn build`
+Builds the app for production to the `build` folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `npm run lint`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This will check the code quality with Eslint.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run format`
 
-### `yarn eject`
+Will format the source file with Prettier
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Folder Structure
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `build`: production build of application.
+- `src`: source code of project.
+  - `components`- list of all resuable component. Each component has its own style and test file.
+  - `configs` - configuration properties for endpoints, routes and variable.
+  - `container` - Application layout, Container components(with Redux) and App Routes
+  - `states` - redux states that includes action, selector, reducer and their tests
+  - `store` - redux setup combine reducer, middlewares and store initialisation
+  - `utils` - global resuable functions
+- `test`: Test Utils for the Project
+- `mockStates`- Stores all the mocked states that is used for application test
+- `utils`- For Test setup mocking redux store and test functions at one place
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Requirement
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `​Using React, build a webapp that queries this paginated endpoint. Use Redux to save the results and then print out the results as a list on the page.` - DONE
+- `The app should be paginated with the pagination reflected in the url`- DONE
+- `Write at least one component as a React class based component `- DONE
+- `Write at least one unit test`- DONE
+- ​`Host your code on Github, put all the code in a Pull Request against the (probably) empty repo`- https://github.com/shubh34/test-book-app/pull/18
 
-## Learn More
+## Additional functionality
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `Responsive web application for all type of user mobile tablet web`
+- `Deployed the production Ready code at  https://demo-book.netlify.app/`
+- `Loading state- when api call in progress`
+- `Error Handling when api fails`
+- `Page Not Found when URL is wrong`
+- `No books found when Api Doesn't return books`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+React, Redux, Jest, React testing library, Webpack, Prettier, Styled Component, 
 
-### Analyzing the Bundle Size
+## TO DO
+- `Search Functionality`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
