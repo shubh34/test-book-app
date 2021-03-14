@@ -4,7 +4,7 @@ import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import createMockStore from './createMockStore';
 import { Provider } from 'react-redux';
-import { MemoryRouter } from 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom';
 
 const customRender = (Component) => render(Component);
 

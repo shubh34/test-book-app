@@ -2,7 +2,6 @@ import { setUpConnectedComponent } from '../../../test/utils';
 
 import Books from './';
 
-
 describe('Books', () => {
   it('should render Books', () => {
     const hasThunk = true;
