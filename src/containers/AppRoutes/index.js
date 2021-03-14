@@ -11,7 +11,7 @@ const AppRoutes = () => {
   const { HOME, BOOKS, NOT_FOUND } = routes;
   return (
     <Switch>
-      <Route path={[HOME.path, BOOKS.path]} exact component={Books} />
+      <Route path={[BOOKS.path, HOME.path]} exact component={Books} />
       <Route path={NOT_FOUND.path} component={NotFound} />
       <Redirect to={NOT_FOUND.path} />
     </Switch>

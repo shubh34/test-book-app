@@ -1,4 +1,11 @@
-import { FETCH_BOOKS_REQUEST, FETCH_BOOKS_SUCCESS, FETCH_BOOKS_FAILURE } from './actions';
+import {
+  FETCH_BOOKS_REQUEST,
+  FETCH_BOOKS_SUCCESS,
+  FETCH_BOOKS_FAILURE,
+  SET_PAGE_NUMBER_TO_FETCH_BOOKS,
+  SET_PER_PAGE_BOOKS_TO_FETCH,
+  SET_SEARCH_CRITERIA_TO_FETCH_BOOKS
+} from './actions';
 
 export const pageDefaultState = {
   lists: [],
@@ -55,6 +62,35 @@ const reducer = (state = defaultState, action) => {
             ...pageDefaultState,
             hasError: true
           }
+        }
+      };
+    case SET_PAGE_NUMBER_TO_FETCH_BOOKS:
+      return {
+        ...state,
+        books: {},
+        meta: {
+          ...state.meta,
+          page: action.page
+        }
+      };
+    case SET_PER_PAGE_BOOKS_TO_FETCH:
+      return {
+        ...state,
+        books: {},
+        meta: {
+          ...state.meta,
+          page: 1,
+          itemsPerPage: action.itemsPerPage
+        }
+      };
+    case SET_SEARCH_CRITERIA_TO_FETCH_BOOKS:
+      return {
+        ...state,
+        books: {},
+        meta: {
+          ...state.meta,
+          page: 1,
+          filters: action.filters
         }
       };
     default:

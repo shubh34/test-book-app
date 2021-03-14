@@ -30,11 +30,10 @@ Object {
     "action": "POP",
     "location": Object {
       "hash": "",
-      "key": "default",
       "pathname": "/",
       "query": Object {},
       "search": "",
-      "state": null,
+      "state": undefined,
     },
   },
 }

@@ -3,7 +3,7 @@
 exports[`Button renders without crashing 1`] = `
 <div>
   <button
-    class="sc-bdfBwQ kQBUXH"
+    class="sc-bdfBwQ jVjcFc"
     data-testid="button-id"
     id="button-id"
     name="Button name"

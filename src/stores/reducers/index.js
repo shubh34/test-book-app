@@ -5,8 +5,8 @@ import { connectRouter } from 'connected-react-router';
 
 export const reducers = (history: Object) =>
   combineReducers({
-    router: connectRouter(history),
     books,
-    applicationConfig
+    applicationConfig,
+    router: connectRouter(history)
   });
 export default reducers;

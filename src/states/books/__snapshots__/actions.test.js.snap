@@ -3,7 +3,7 @@
 exports[`Books actions fetchBooks should create action for fetchBooks with default params 1`] = `
 Object {
   "@@redux-api-middleware/RSAA": Object {
-    "body": "{\\"page\\":1,\\"itemsPerPage\\":20,\\"filters\\":[]}",
+    "body": "{\\"page\\":1,\\"itemsPerPage\\":20,\\"filters\\":[{\\"type\\":\\"all\\",\\"values\\":[\\"\\"]}]}",
     "endpoint": "/api/books",
     "method": "POST",
     "types": Array [
