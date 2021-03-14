@@ -2,7 +2,52 @@
 
 exports[`Books should render Books 1`] = `
 <div>
-  <div>
+  <div
+    class="sc-iBPRYJ gokKvP"
+  >
+    <h3
+      class="sc-jSgupP lnXuzl"
+    >
+      Find My Books
+    </h3>
+    <div
+      style="display: flex; align-items: center; padding: 16px 0px;"
+    >
+      Show
+      <button
+        class="sc-gKsewC jyHuJi"
+        data-testid="10"
+        id="10"
+        name="10"
+      >
+        10
+      </button>
+      <button
+        class="sc-gKsewC fzYsXG"
+        data-testid="20"
+        id="20"
+        name="20"
+      >
+        20
+      </button>
+      <button
+        class="sc-gKsewC jyHuJi"
+        data-testid="40"
+        id="40"
+        name="40"
+      >
+        40
+      </button>
+      <button
+        class="sc-gKsewC jyHuJi"
+        data-testid="80"
+        id="80"
+        name="80"
+      >
+        80
+      </button>
+      Entries
+    </div>
     <table
       class="sc-bdfBwQ SZIUD"
     >
@@ -76,10 +121,71 @@ exports[`Books should render Books 1`] = `
         </tr>
       </tbody>
     </table>
-    Heya Calling Books API 
-    <button>
-      Search
-    </button>
+    <div
+      style="display: flex; padding: 16px 0px;"
+    >
+      <button
+        class="sc-gKsewC jyHuJi"
+        disabled=""
+        name="Previous"
+      >
+        Previous
+      </button>
+      <button
+        class="sc-gKsewC fzYsXG"
+        data-testid="1"
+        id="1"
+        name="1"
+      >
+        1
+      </button>
+      <button
+        class="sc-gKsewC jyHuJi"
+        data-testid="2"
+        id="2"
+        name="2"
+      >
+        2
+      </button>
+      <button
+        class="sc-gKsewC jyHuJi"
+        data-testid="3"
+        id="3"
+        name="3"
+      >
+        3
+      </button>
+      <button
+        class="sc-gKsewC jyHuJi"
+        data-testid="4"
+        id="4"
+        name="4"
+      >
+        4
+      </button>
+      <button
+        class="sc-gKsewC jyHuJi"
+        data-testid="5"
+        id="5"
+        name="5"
+      >
+        5
+      </button>
+      <button
+        class="sc-gKsewC jyHuJi"
+        data-testid="6"
+        id="6"
+        name="6"
+      >
+        6
+      </button>
+      <button
+        class="sc-gKsewC jyHuJi"
+        name="Next"
+      >
+        Next
+      </button>
+    </div>
   </div>
 </div>
 `;
