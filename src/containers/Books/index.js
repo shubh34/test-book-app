@@ -7,10 +7,12 @@ import BooksFilters from './BooksFilters';
 import BooksPagination from './BooksPagination';
 import Container from '../../components/Container';
 import PageHeader from '../../components/PageHeader';
+import { useHistory } from 'react-router';
 
 const Books = () => {
   const dispatch = useDispatch();
-  const { page, filters, itemsPerPage } = useBooks();
+  const history = useHistory();
+  const { page, filters, itemsPerPage, searchParams } = useBooks();
   const stringifiedFilters = JSON.stringify(filters);
   useEffect(() => {
     const filters = JSON.parse(stringifiedFilters);
@@ -23,7 +25,7 @@ const Books = () => {
       <PageHeader header={'Find My Books'} />
       <BooksFilters />
       <BooksList />
-      <BooksPagination />
+      <BooksPagination searchParams={searchParams} history={history} />
     </Container>
   );
 };

@@ -6,63 +6,81 @@ import {
   shouldShowNextButton,
   shouldShowPagination
 } from '../../../states/books/selectors';
-import { useSelector } from 'react-redux';
-import { useHistory, useLocation } from 'react-router';
 import routes from '../../../configs/routes';
 import { paginationButtonsToShow } from '../../../configs';
+import { Component } from 'react';
+import { connect } from 'react-redux';
 
-const BooksPagination = () => {
-  const history = useHistory();
-  const location = useLocation();
-  const activePageNumber = useSelector(getActivePageNumber);
-  const activePageStart = useSelector(getActivePageStart);
-  const showPagination = useSelector(shouldShowPagination);
+const mapStateToProps = (state) => ({
+  activePageNumber: getActivePageNumber(state),
+  activePageStart: getActivePageStart(state),
+  showPagination: shouldShowPagination(state),
+  showPrevious: shouldShowPreviousButton(state),
+  showNext: shouldShowNextButton(state)
+});
 
-  const showPrevious = useSelector(shouldShowPreviousButton);
-  const showNext = useSelector(shouldShowNextButton);
+const mapDispatch = (dispatch) => ({});
 
-  const searchParams = new URLSearchParams(location.search);
-  const handlePageNumberClick = (event) => {
+class BooksPagination extends Component {
+  constructor(props) {
+    super(props);
+    this.handlePageNumberClick = this.handlePageNumberClick.bind(this);
+    this.handlePageNext = this.handlePageNext.bind(this);
+    this.handlePagePrevious = this.handlePagePrevious.bind(this);
+  }
+  handlePageNumberClick(event) {
+    const { searchParams, history } = this.props;
     searchParams.set('page', event.target.id);
     history.push({
       path: routes.BOOKS.resolve(),
       search: `?${searchParams.toString()}`
     });
-  };
-  const handlePageNext = () => {
+  }
+  handlePageNext() {
+    const { searchParams, history, activePageNumber } = this.props;
     searchParams.set('page', activePageNumber + 1);
     history.push({
       path: routes.BOOKS.resolve(),
       search: `?${searchParams.toString()}`
     });
-  };
-  const handlePagePrevious = () => {
+  }
+  handlePagePrevious() {
+    const { searchParams, history, activePageNumber } = this.props;
     searchParams.set('page', activePageNumber - 1);
     history.push({
       path: routes.BOOKS.resolve(),
       search: `?${searchParams.toString()}`
     });
-  };
-  if (!showPagination) {
-    return null;
   }
-  return (
-    <div style={{ display: 'flex', padding: '16px 0' }}>
-      <Button name="Previous" disabled={!showPrevious} onClick={handlePagePrevious} />
-      {[...Array(paginationButtonsToShow)].map((count, index) => {
-        const buttonNumber = activePageStart + index;
-        return (
-          <Button
-            key={`page-${buttonNumber}`}
-            name={buttonNumber}
-            id={buttonNumber}
-            isActive={buttonNumber === activePageNumber}
-            onClick={handlePageNumberClick}
-          />
-        );
-      })}
-      <Button name={'Next'} disabled={!showNext} onClick={handlePageNext} />
-    </div>
-  );
-};
-export default BooksPagination;
+  render() {
+    const {
+      showPagination,
+      showPrevious,
+      activePageStart,
+      activePageNumber,
+      showNext
+    } = this.props;
+    if (!showPagination) {
+      return null;
+    }
+    return (
+      <div style={{ display: 'flex', padding: '16px 0' }}>
+        <Button name="Previous" disabled={!showPrevious} onClick={this.handlePagePrevious} />
+        {[...Array(paginationButtonsToShow)].map((count, index) => {
+          const buttonNumber = activePageStart + index;
+          return (
+            <Button
+              key={`page-${buttonNumber}`}
+              name={buttonNumber}
+              id={buttonNumber}
+              isActive={buttonNumber === activePageNumber}
+              onClick={this.handlePageNumberClick}
+            />
+          );
+        })}
+        <Button name={'Next'} disabled={!showNext} onClick={this.handlePageNext} />
+      </div>
+    );
+  }
+}
+export default connect(mapStateToProps, mapDispatch)(BooksPagination);
