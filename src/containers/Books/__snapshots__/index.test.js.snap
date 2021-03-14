@@ -11,7 +11,7 @@ exports[`Books should render Books 1`] = `
       Find My Books
     </h3>
     <div
-      style="display: flex; align-items: center; padding: 16px 0px;"
+      style="display: flex; align-items: center; padding: 16px 0px; flex-flow: wrap;"
     >
       Show
       <button
@@ -122,7 +122,7 @@ exports[`Books should render Books 1`] = `
       </tbody>
     </table>
     <div
-      style="display: flex; padding: 16px 0px;"
+      style="display: flex; flex-flow: wrap; padding: 16px 0px;"
     >
       <button
         class="sc-gKsewC jyHuJi"
@@ -201,7 +201,7 @@ exports[`Books should render Books Not Found 1`] = `
       Find My Books
     </h3>
     <div
-      style="display: flex; align-items: center; padding: 16px 0px;"
+      style="display: flex; align-items: center; padding: 16px 0px; flex-flow: wrap;"
     >
       Show
       <button
@@ -300,7 +300,7 @@ exports[`Books should render Books Not Found when error 1`] = `
       Find My Books
     </h3>
     <div
-      style="display: flex; align-items: center; padding: 16px 0px;"
+      style="display: flex; align-items: center; padding: 16px 0px; flex-flow: wrap;"
     >
       Show
       <button
@@ -448,7 +448,7 @@ exports[`Books should render Books in Loading State 1`] = `
       Find My Books
     </h3>
     <div
-      style="display: flex; align-items: center; padding: 16px 0px;"
+      style="display: flex; align-items: center; padding: 16px 0px; flex-flow: wrap;"
     >
       Show
       <button
