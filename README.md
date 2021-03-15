@@ -1,5 +1,7 @@
 This project is a responsive demo application where you can find huge collection of Books.
 The Books are displayed in Table Format and user can change per page view from 10 to 80 and can view books from one page to another.
+Click on this to view the app. Please use http url
+http://find-my-books.herokuapp.com/
 
 
 ## Project Setup
@@ -61,6 +63,7 @@ Will format the source file with Prettier
 ## Additional functionality
 
 - `Responsive web application for all type of user mobile tablet web`
+- `Deployed in http://find-my-books.herokuapp.com/`
 - `Loading state- when api call in progress`
 - `Error Handling when api fails`
 - `Page Not Found when URL is wrong`
