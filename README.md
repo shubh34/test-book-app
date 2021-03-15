@@ -54,7 +54,7 @@ Will format the source file with Prettier
 
 - `​Using React, build a webapp that queries this paginated endpoint. Use Redux to save the results and then print out the results as a list on the page.` - DONE
 - `The app should be paginated with the pagination reflected in the url`- DONE
-- `Write at least one component as a React class based component `- DONE
+- `Write at least one component as a React class based component `- BooksPagination is the class component
 - `Write at least one unit test`- DONE
 - ​`Host your code on Github, put all the code in a Pull Request against the (probably) empty repo`- https://github.com/shubh34/test-book-app/pull/18
 
