@@ -1,7 +1,6 @@
 This project is a responsive demo application where you can find huge collection of Books.
 The Books are displayed in Table Format and user can change per page view from 10 to 80 and can view books from one page to another.
 
-
 ## Project Setup
 
 - Clone the project using `git clone https://github.com/shubh34/test-book-app.git`
