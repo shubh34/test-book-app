@@ -28,16 +28,17 @@ export const useBooks = () => {
       setSearchQuery(search);
     }
   }, [dispatch, search, setSearchQuery]);
-  useEffect(() => {
-    if (!isNaN(page)) {
-      dispatch(setPageNumberToFetchBook(page));
-    }
-  }, [dispatch, page]);
+
   useEffect(() => {
     if (!isNaN(perPage)) {
       dispatch(setPerPageToFetchBooks(perPage));
     }
   }, [dispatch, perPage]);
+  useEffect(() => {
+    if (!isNaN(page)) {
+      dispatch(setPageNumberToFetchBook(page));
+    }
+  }, [dispatch, page]);
 
   const meta = useSelector(getBooksMeta);
   return {
