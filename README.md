@@ -1,7 +1,10 @@
+# test-book-app
+This is the test applicaition
 This project is a responsive demo application where you can find huge collection of Books.
 The Books are displayed in Table Format and user can change per page view from 10 to 80 and can view books from one page to another.
 
-
+Click on this to view the app. Please use http url
+http://find-my-books.herokuapp.com/ 
 ## Project Setup
 
 - Clone the project using `git clone https://github.com/shubh34/test-book-app.git`
@@ -61,6 +64,7 @@ Will format the source file with Prettier
 ## Additional functionality
 
 - `Responsive web application for all type of user mobile tablet web`
+- `Deployed  on http://find-my-books.herokuapp.com/ `
 - `Loading state- when api call in progress`
 - `Error Handling when api fails`
 - `Page Not Found when URL is wrong`
@@ -73,3 +77,18 @@ React, Redux, Jest, React testing library, Webpack, Prettier, Styled Component,
 ## TO DO
 
 - `Search Functionality`
+-
+## Screens
+<img width="1400" alt="Screenshot 2021-03-14 at 20 49 02" src="https://user-images.githubusercontent.com/10782765/111083486-3464f500-850e-11eb-8bff-75030afc5061.png">
+<img width="1440" alt="Screenshot 2021-03-14 at 20 49 59" src="https://user-images.githubusercontent.com/10782765/111083488-375fe580-850e-11eb-9ed9-a5811e6080ec.png">
+<img width="1412" alt="Screenshot 2021-03-14 at 20 50 07" src="https://user-images.githubusercontent.com/10782765/111083493-3929a900-850e-11eb-9a97-b3deca8401e4.png">
+<img width="428" alt="Screenshot 2021-03-14 at 20 54 23" src="https://user-images.githubusercontent.com/10782765/111083496-3a5ad600-850e-11eb-982e-045c65920804.png">
+<img width="567" alt="Screenshot 2021-03-14 at 20 54 38" src="https://user-images.githubusercontent.com/10782765/111083497-3b8c0300-850e-11eb-8beb-9f146f2c1fba.png">
+<img width="744" alt="Screenshot 2021-03-14 at 20 55 12" src="https://user-images.githubusercontent.com/10782765/111083498-3c249980-850e-11eb-85b3-98600cec2487.png">
+<img width="833" alt="Screenshot 2021-03-14 at 20 55 23" src="https://user-images.githubusercontent.com/10782765/111083499-3d55c680-850e-11eb-8393-411177d238c6.png">
+<img width="1354" alt="Screenshot 2021-03-14 at 20 56 43" src="https://user-images.githubusercontent.com/10782765/111083501-3e86f380-850e-11eb-851e-2540c14be075.png">
+<img width="1329" alt="Screenshot 2021-03-14 at 20 56 53" src="https://user-images.githubusercontent.com/10782765/111083505-4050b700-850e-11eb-906e-138d1ed024b0.png">
+<img width="1317" alt="Screenshot 2021-03-14 at 20 58 49" src="https://user-images.githubusercontent.com/10782765/111083507-40e94d80-850e-11eb-8058-0b6026a99d6a.png">
+
+
+<img width="1435" alt="Screenshot 2021-03-14 at 21 44 51" src="https://user-images.githubusercontent.com/10782765/111083579-8efe5100-850e-11eb-856c-afbf576cc136.png">
