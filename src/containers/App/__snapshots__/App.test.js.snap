@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<div>
+  <main
+    class="sc-bdfBwQ eBSPrX App"
+  >
+    <header
+      style="display: none; align-items: center; padding: 0px 16px;"
+    >
+      <h2
+        style="padding: 16px 16px 16px 0px;"
+      >
+        My Books Store
+      </h2>
+      <nav>
+        <a
+          href="/books"
+        >
+          Home
+        </a>
+      </nav>
+    </header>
+    <div
+      style="min-height: 90vh; display: none;"
+    />
+    <footer
+      style="padding: 24px; display: none; align-items: center; justify-content: center;"
+    >
+      CopyRight by My Books Store
+    </footer>
+    <div />
+  </main>
+</div>
+`;

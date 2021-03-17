@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders render Menu 1`] = `
+<div>
+  <header
+    style="display: flex; align-items: center; padding: 0px 16px;"
+  >
+    <h2
+      style="padding: 16px 16px 16px 0px;"
+    >
+      My Books Store
+    </h2>
+    <nav>
+      <a
+        href="/books"
+      >
+        Home
+      </a>
+    </nav>
+  </header>
+</div>
+`;

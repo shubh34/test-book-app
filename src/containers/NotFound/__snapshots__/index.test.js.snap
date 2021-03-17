@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders render not page not found 1`] = `
+<div>
+  <div
+    style="display: flex; justify-content: center; align-items: center; height: 600px;"
+  >
+    <h3
+      class="sc-bdfBwQ irqVJK"
+    >
+      Page Not Found
+    </h3>
+  </div>
+</div>
+`;

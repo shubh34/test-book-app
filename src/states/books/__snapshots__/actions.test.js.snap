@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Books actions fetchBooks should create action for fetchBooks with default params 1`] = `
+Object {
+  "@@redux-api-middleware/RSAA": Object {
+    "body": "{\\"page\\":1,\\"itemsPerPage\\":20,\\"filters\\":[{\\"type\\":\\"all\\",\\"values\\":[\\"\\"]}]}",
+    "endpoint": "/api/books",
+    "method": "POST",
+    "types": Array [
+      Object {
+        "meta": Object {
+          "page": 1,
+        },
+        "type": "GET_BOOKS_REQUEST",
+      },
+      Object {
+        "meta": Object {
+          "page": 1,
+        },
+        "type": "GET_BOOKS_SUCCESS",
+      },
+      Object {
+        "meta": Object {
+          "page": 1,
+        },
+        "type": "GET_BOOKS_FAILURE",
+      },
+    ],
+  },
+}
+`;
+
+exports[`Books actions fetchBooks should create action for fetchBooks with passed params 1`] = `
+Object {
+  "@@redux-api-middleware/RSAA": Object {
+    "body": "{\\"page\\":2,\\"itemsPerPage\\":60,\\"filters\\":[{\\"type\\":\\"all\\",\\"values\\":[\\"YOUR_SEARCH_FIELD_CONTENTS\\"]}]}",
+    "endpoint": "/api/books",
+    "method": "POST",
+    "types": Array [
+      Object {
+        "meta": Object {
+          "page": 2,
+        },
+        "type": "GET_BOOKS_REQUEST",
+      },
+      Object {
+        "meta": Object {
+          "page": 2,
+        },
+        "type": "GET_BOOKS_SUCCESS",
+      },
+      Object {
+        "meta": Object {
+          "page": 2,
+        },
+        "type": "GET_BOOKS_FAILURE",
+      },
+    ],
+  },
+}
+`;

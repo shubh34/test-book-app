@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`configureStore should create store 1`] = `
+Object {
+  "dispatch": [Function],
+  "getState": [Function],
+  "replaceReducer": [Function],
+  "subscribe": [Function],
+  Symbol(observable): [Function],
+}
+`;
+
+exports[`configureStore should create store 2`] = `
+Object {
+  "applicationConfig": Object {
+    "books": Array [],
+    "hasError": false,
+    "isApiCallInProgress": Array [],
+  },
+  "books": Object {
+    "books": Object {},
+    "meta": Object {
+      "count": 0,
+      "filters": Array [],
+      "itemsPerPage": 20,
+      "page": 1,
+    },
+  },
+  "router": Object {
+    "action": "POP",
+    "location": Object {
+      "hash": "",
+      "pathname": "/",
+      "query": Object {},
+      "search": "",
+      "state": undefined,
+    },
+  },
+}
+`;

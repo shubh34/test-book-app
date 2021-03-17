@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selectors getBooks should return books for active page number 1`] = `
+Array [
+  Object {
+    "book_authors": "Author 1,Author 2",
+    "book_pages": 104,
+    "book_publication_city": "City",
+    "book_publication_country": "Country",
+    "book_publication_location": "City, Country",
+    "book_publication_year": 2020,
+    "book_title": "Book Title",
+    "id": 2086,
+  },
+]
+`;
+
+exports[`Selectors getBooksMeta should get meta 1`] = `
+Object {
+  "count": 5,
+  "filters": Array [],
+  "itemsPerPage": 2,
+  "page": 1,
+}
+`;
